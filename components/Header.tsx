@@ -13,7 +13,7 @@ import {
 
 const Header = () => {
   return (
-    <header className="w-full bg-white py-4">
+    <header className="w-full bg-white py-4 shadow-sm">
       <div className="container mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-4 md:gap-0">
 
         {/* Logo Section */}
@@ -28,37 +28,47 @@ const Header = () => {
 
         {/* Navigation Links */}
         <div className="order-3 md:order-none flex flex-wrap justify-center gap-2 md:gap-4">
-          <Link href='/' className="border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D] transition-all hover:bg-[#5E4D9D] hover:text-white">
+          <Link href='/' className="btn-secondary">
             اتصل بنا
           </Link>
-          <Link href='/' className="border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D] transition-all hover:bg-[#5E4D9D] hover:text-white">
+          <Link href='/' className="btn-secondary">
             أهدافنا
           </Link>
-          <Link href='/' className="border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D] transition-all hover:bg-[#5E4D9D] hover:text-white">
+          <Link href='/' className="btn-secondary">
             رؤيتنا
           </Link>
-          <Link href='/' className="border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D] transition-all hover:bg-[#5E4D9D] hover:text-white">
+          <Link href='/' className="btn-secondary">
             خدمتنا
           </Link>
-          <Link href='/' className="border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-white bg-[#5E4D9D]">
+          <Link href='/' className="btn-primary">
             الرئيسية
           </Link>
         </div>
 
         {/* Language Selector and Book Meeting Button */}
         <div className="order-2 md:order-none flex items-center gap-2 md:gap-4">
+
           <Select>
-            <SelectTrigger dir="rtl" className="w-[100px] md:w-[120px] text-sm md:text-base">
+            <SelectTrigger
+              dir="rtl"
+              className="btn-primary
+                w-[100px]
+                focus:outline-none 
+                focus-visible:outline-none 
+                focus-visible:ring-0 
+                focus-visible:ring-offset-0"
+            >
               <SelectValue placeholder="اللغة" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent dir="rtl" className="border border-[#5E4D9D] text-[#5E4D9D]">
               <SelectGroup>
-                <SelectItem value="english">English</SelectItem>
-                <SelectItem value="arabic">Arabic</SelectItem>
+                <SelectItem value="arabic" className="font-semibold">لغة عربية</SelectItem>
+                <SelectItem value="english" className="font-semibold hover:text-[#5E4D9D]">لغة انكليزية</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
-          <Link href="/book-meeting" className="border border-[#DFD7FF] bg-[#DFD7FF] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D]">
+
+          <Link href="/book-meeting" className="btn-tertiary">
             احجز اجتماع
           </Link>
         </div>

@@ -71,3 +71,29 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Height */
+.h-big {
+  height: 100vh
+}
+
+.h-big-header {
+  height: calc(100vh - 200px)
+}
+
+.h-half {
+  height: 75vh
+}
+
+/* Buttons */
+.btn-primary {
+  @apply border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-white bg-[#5E4D9D];
+}
+
+.btn-secondary {
+  @apply border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D] transition-all hover:bg-[#5E4D9D] hover:text-white;
+}
+
+.btn-tertiary {
+  @apply border border-[#DFD7FF] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D] bg-[#DFD7FF];
+}

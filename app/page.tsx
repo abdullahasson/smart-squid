@@ -1,8 +1,11 @@
+// Sections
 import OurServices from "./_sections/OurServices";
 import OurVision from "./_sections/OurVision";
 import OurGoals from "./_sections/OurGoals";
 import SuccessPartners from "./_sections/SuccessPartners";
 import Managers from "./_sections/Managers";
+// Shadcn UI
+import { Separator } from "@/components/ui/separator"
 
 const User = () => {
     return (
@@ -10,25 +13,25 @@ const User = () => {
             {/* Our Services */}
             <OurServices />
 
-            <hr />
+            <Separator />
 
             {/* Our Vision */}
             <OurVision />
 
-            <hr />
+            <Separator />
 
             {/* Our Goals */}
             <OurGoals />
 
 
-            <hr />
+            <Separator />
 
             {/* Success partners */}
             <SuccessPartners />
 
 
 
-            <hr />
+            <Separator />
 
             {/*Managers*/}
             <Managers />

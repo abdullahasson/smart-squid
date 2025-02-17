@@ -6,7 +6,7 @@ import Manager2 from "@/image/manager 2.jpg"
 const Managers = () => {
 
     return (
-        <section className="w-full">
+        <section className="w-full h-half">
             <div className="container mx-auto flex flex-col items-end pt-10 pb-12 px-4 sm:px-6 lg:px-8">
                 {/* Heading */}
                 <div className="w-full text-end mb-10">
@@ -16,7 +16,7 @@ const Managers = () => {
                 </div>
 
                 {/* Managers Container */}
-                <div className="w-full flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="mt-12 w-full flex flex-col md:flex-row justify-between items-center gap-8">
                     {/* Manager 1 */}
                     <div className="w-full md:w-1/2 flex flex-col md:flex-row-reverse items-center text-end gap-4">
                         <div className="w-32 h-32 sm:w-40 sm:h-40 relative flex-shrink-0">
@@ -24,7 +24,7 @@ const Managers = () => {
                                 src={Manager1}
                                 alt="Manager 1"
                                 className="rounded-full object-cover"
-                                layout="fill" // Ensures the image fills the container
+                                style={{ objectFit: 'contain' }} // Ensures the image fills the container
                             />
                         </div>
                         <div>
@@ -44,7 +44,7 @@ const Managers = () => {
                                 src={Manager2}
                                 alt="Manager 2"
                                 className="rounded-full object-cover"
-                                layout="fill" // Ensures the image fills the container
+                                style={{ objectFit: 'contain' }} // Ensures the image fills the container
                             />
                         </div>
                         <div>

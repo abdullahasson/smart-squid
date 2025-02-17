@@ -4,14 +4,14 @@ import OurServicesImage from "@/image/our_services.png"
 const OurServices = () => {
 
     return (
-        <section id="our_services" className="w-full">
+        <section id="our_services" className="w-full h-bih-header">
             <div className="container flex flex-col md:flex-row min-h-screen">
                 {/* Image Section */}
                 <div className="w-full md:w-1/2 h-[400px] md:h-auto relative flex items-center justify-center p-4">
                     <div className="relative w-full h-full">
-                        <Image 
-                            src={OurServicesImage} 
-                            alt="Our Services" 
+                        <Image
+                            src={OurServicesImage}
+                            alt="Our Services"
                             fill
                             className="object-contain"
                             sizes="(max-width: 768px) 100vw, 50vw"
@@ -24,7 +24,7 @@ const OurServices = () => {
                     <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold text-center md:text-right">
                         خدمتنا
                     </h2>
-                    
+
                     <p className="text-[#7B7B7B] text-base md:text-xl font-semibold text-center md:text-right leading-7 md:leading-9">
                         نحن في حبار الذكية نقدم مجموعة شاملة من الحلول الإبداعية التي تهدف إلى تعزيز وجودك الرقمي وتحقيق أهدافك التجارية.
                     </p>
@@ -41,7 +41,7 @@ const OurServices = () => {
             </div>
         </section>
     )
-    
+
 }
 
 export default OurServices

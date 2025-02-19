@@ -9,18 +9,18 @@ const Footer = () => {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row-reverse text-end justify-between items-start gap-8 lg:gap-4">
             {/* Logo Section */}
-            <div className="flex justify-center items-center mx-auto lg:mx-0">
+            <div className="flex-1 flex justify-center items-center mx-auto lg:mx-0">
                 <Image
                     src={LogoImage}
                     alt="Logo"
-                    className="w-48 sm:w-60"
+                    className="w-48 sm:w-60 my-auto"
                     width={240} // Intrinsic width
                     height={120} // Intrinsic height
                 />
             </div>
 
             {/* Links Section */}
-            <div className="flex flex-col sm:flex-row justify-around items-start w-full lg:w-auto gap-8 sm:gap-12">
+            <div className="flex flex-col sm:flex-row-reverse sm:justify-around items-start w-full flex-[5] gap-8 sm:gap-12">
                 {/* Quick Links */}
                 <div className="flex flex-col gap-2 text-lg">
                     <Link className="hover:underline transition-all" href="/">
@@ -45,28 +45,33 @@ const Footer = () => {
                     <p className="text-[#5E4D9D] text-lg">تواصل معنا</p>
                     <ul>
                         <li>
-                            <Link href="/" className="hover:underline transition-all">
-                                facebool
+                            <Link href="/" className="hover:underline transition-all flex items-center gap-1">
+                                <span>facebool</span>
+                                
                             </Link>
                         </li>
                         <li>
-                            <Link href="/" className="hover:underline transition-all">
-                                whatsapp
+                            <Link href="/" className="hover:underline transition-all flex items-center gap-1">
+                                <span>whatsapp</span>
+                                
                             </Link>
                         </li>
                         <li>
-                            <Link href="/" className="hover:underline transition-all">
-                                telegram
+                            <Link href="/" className="hover:underline transition-all flex items-center gap-1">
+                                <span>telegram</span>
+                                
                             </Link>
                         </li>
                         <li>
-                            <Link href="/" className="hover:underline transition-all">
-                                xing
+                            <Link href="/" className="hover:underline transition-all flex items-center gap-1">
+                                <span>xing</span>
+                                
                             </Link>
                         </li>
                         <li>
-                            <Link href="/" className="hover:underline transition-all">
-                                twitter
+                            <Link href="/" className="hover:underline transition-all flex items-center gap-1">
+                                <span>twitter</span>
+                                
                             </Link>
                         </li>
                     </ul>

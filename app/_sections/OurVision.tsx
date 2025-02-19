@@ -3,8 +3,8 @@ import OurVisionImage from "@/image/our_vision.png"
 
 const OurVision = () => {
     return (
-        <section id="our_vision" className="w-full h-big">
-            <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center text-end">
+        <section id="our_vision" className="w-full">
+            <div className="container mx-auto py-12 flex flex-col-reverse md:flex-row items-center justify-center text-end">
                 {/* Content Section */}
                 <div className="w-full md:w-1/2 flex flex-col items-end justify-center gap-4 p-6 md:p-12">
                     <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold mb-4">

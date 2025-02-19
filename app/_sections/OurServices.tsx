@@ -4,10 +4,10 @@ import OurServicesImage from "@/image/our_services.png"
 const OurServices = () => {
 
     return (
-        <section id="our_services" className="w-full h-bih-header">
-            <div className="container flex flex-col md:flex-row min-h-screen">
+        <section id="our_services" className="w-full h-auto">
+            <div className="container flex flex-col py-0 md:flex-row justify-start min-h-screen">
                 {/* Image Section */}
-                <div className="w-full md:w-1/2 h-[400px] md:h-auto relative flex items-center justify-center p-4">
+                <div className="w-full md:w-1/2 h-[400px] md:h-auto relative flex items-center justify-start">
                     <div className="relative w-full h-full">
                         <Image
                             src={OurServicesImage}
@@ -25,16 +25,16 @@ const OurServices = () => {
                         خدمتنا
                     </h2>
 
-                    <p className="text-[#7B7B7B] text-base md:text-xl font-semibold text-center md:text-right leading-7 md:leading-9">
+                    <p className="w-full max-w-[500px] text-[#7B7B7B] text-base md:text-xl font-semibold text-center md:text-right leading-10 md:leading-10">
                         نحن في حبار الذكية نقدم مجموعة شاملة من الحلول الإبداعية التي تهدف إلى تعزيز وجودك الرقمي وتحقيق أهدافك التجارية.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[500px]">
-                        <button className="bg-[#5E4D9D] py-3 px-3 text-white rounded-md w-full sm:w-52">
-                            استكشف المزيد
-                        </button>
-                        <button className="bg-[#5E4D9D] py-3 px-3 text-white rounded-md w-full sm:w-52">
+                    <div className="flex flex-col sm:flex-row items-center sm:justify-end gap-4 w-full max-w-[500px]">
+                        <button className="btn-section">
                             اجتمع معنا
+                        </button>
+                        <button className="btn-section">
+                            استكشف المزيد
                         </button>
                     </div>
                 </div>

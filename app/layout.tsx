@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Almarai , Poppins } from "next/font/google";
 // Components
 import Header from "@/components/Header"
+// import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 // style
 import "./globals.css";
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         <div>
             <Header />
+            {/* <Navbar /> */}
                 {children}
             <Footer />
         </div>

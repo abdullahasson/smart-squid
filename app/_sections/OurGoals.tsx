@@ -4,8 +4,8 @@ import OurGoalsImage from "@/image/OurGoals.png";
 
 const OurGoals = () => {
     return (
-        <section id="our_goals" className="w-full h-big py-12 sm:py-0">
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center">
+        <section id="our_goals" className="w-full py-12 sm:py-0">
+            <div className="container mx-auto py-12 flex flex-col lg:flex-row items-center justify-center">
                 {/* Image Section */}
                 <div className="w-full lg:w-1/2 h-auto flex justify-center items-center p-4 sm:p-8">
                     <Image

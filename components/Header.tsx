@@ -37,7 +37,7 @@ const Header = () => {
           <Link href='/' className="btn-secondary">
             رؤيتنا
           </Link>
-          <Link href='/' className="btn-secondary">
+          <Link href='/services' className="btn-secondary">
             خدمتنا
           </Link>
           <Link href='/' className="btn-primary">
@@ -60,7 +60,7 @@ const Header = () => {
             >
               <SelectValue placeholder="اللغة" />
             </SelectTrigger>
-            <SelectContent dir="rtl" className="border border-[#5E4D9D] text-[#5E4D9D]">
+            <SelectContent dir="rtl" className="w-[100px] border border-[#5E4D9D] text-[#5E4D9D]">
               <SelectGroup>
                 <SelectItem value="arabic" className="font-semibold">لغة عربية</SelectItem>
                 <SelectItem value="english" className="font-semibold hover:text-[#5E4D9D]">لغة انكليزية</SelectItem>

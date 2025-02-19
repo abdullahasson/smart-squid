@@ -6,11 +6,11 @@ import Manager2 from "@/image/manager 2.jpg"
 const Managers = () => {
 
     return (
-        <section className="w-full h-half">
-            <div className="container mx-auto flex flex-col items-end pt-10 pb-12 px-4 sm:px-6 lg:px-8">
+        <section id="managers" className="w-full">
+            <div className="container mx-auto flex flex-col items-end py-12 pb-16 px-4 sm:px-6 lg:px-8">
                 {/* Heading */}
-                <div className="w-full text-end mb-10">
-                    <h2 className="text-[#C74D0A] text-2xl sm:text-3xl font-bold pt-6 mb-4">
+                <div className="w-full text-end">
+                    <h2 className="text-[#C74D0A] text-2xl sm:text-3xl font-bold mb-4">
                         المدراء
                     </h2>
                 </div>

@@ -2,8 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 120px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+
+  @apply bg-slate-300
+}
+
+
 body {
-  background-color: var(--background);
+  background-color: #F8F7FD;
   font-family: "Almarai", sans-serif;
 }
 
@@ -72,18 +89,8 @@ body {
   }
 }
 
-/* Height */
-.h-big {
-  height: 100vh
-}
+/* Section */
 
-.h-big-header {
-  height: calc(100vh - 200px)
-}
-
-.h-half {
-  height: 75vh
-}
 
 /* Buttons */
 .btn-primary {
@@ -96,4 +103,8 @@ body {
 
 .btn-tertiary {
   @apply border border-[#DFD7FF] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-[#5E4D9D] bg-[#DFD7FF];
+}
+
+.btn-section {
+  @apply bg-[#5E4D9D] py-3 px-3 text-white rounded-md w-full sm:w-52;
 }

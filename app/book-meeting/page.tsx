@@ -1,24 +1,17 @@
-"use client"
+// "use client"
 
-import { useState } from "react"
+// import { useState } from "react"
 
-import { Calendar } from "@/components/ui/calendar"
+// import { Calendar } from "@/components/ui/calendar"
 import CustomerDataForm from "@/components/CustomerDataForm";
 
 const BookMeeting = () => {
-  const [date, setDate] = useState<Date | undefined>(new Date())
+  // const [date, setDate] = useState<Date | undefined>(new Date())
 
   return (
     <div>
-      <div className="container mx-auto flex justify-between">
+      <div className="container mx-auto py-12">
         <CustomerDataForm />
-
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          className="border-none"
-        />
       </div>
     </div>
   )

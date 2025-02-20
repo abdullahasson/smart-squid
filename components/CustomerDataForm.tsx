@@ -1,8 +1,12 @@
 "use client"
 
+// React
 import { useForm } from "react-hook-form"
+// Zod
 import { zodResolver } from "@hookform/resolvers/zod"
-
+// Schema
+import { bookMeetingSchema, TBookMeetingSchema } from "@/schema/index"
+// Shadcn UI
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import {
@@ -15,7 +19,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
-import { bookMeetingSchema, TBookMeetingSchema } from "@/schema/index"
 
 export default function CustomerDataForm() {
   const form = useForm<TBookMeetingSchema>({
@@ -24,7 +27,9 @@ export default function CustomerDataForm() {
       fullName: "",
       email: "",
       phone: "",
-      subject: "",
+      store: "",
+      service: "",
+      note: ""
     },
   })
 
@@ -37,7 +42,7 @@ export default function CustomerDataForm() {
     <div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" dir="rtl">
-          <div className="flex justify-between items-start gap-24 w-full">
+          <div className="flex justify-between items-start gap-28 w-full">
             <div className="flex-1 flex flex-col gap-4">
               <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold mb-3">
                 بيانات العميل
@@ -76,9 +81,24 @@ export default function CustomerDataForm() {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormControl>
-                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D] " placeholder="+رقم الهاتف" {...field} />
-                    </FormControl>
+                    <div className="flex gap-2">
+                      {/* <Select defaultValue="+963">
+                        <SelectTrigger className="w-[120px] px-4 py-3 rounded-full border-[#5E4D9D]">
+                          <SelectValue placeholder="+963" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="+963">🇸🇾 +963</SelectItem>
+                          <SelectItem value="+971">🇦🇪 +971</SelectItem>
+                          <SelectItem value="+966">🇸🇦 +966</SelectItem>
+                          <SelectItem value="+20">🇪🇬 +20</SelectItem>
+                        </SelectContent>
+                      </Select> */}
+                      <Input
+                        className="rounded-full px-4 py-3 border border-[#5E4D9D]"
+                        placeholder="955 123 456"
+                        {...field}
+                      />
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -87,7 +107,7 @@ export default function CustomerDataForm() {
               {/* Store */}
               <FormField
                 control={form.control}
-                name="fullName"
+                name="store"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -101,7 +121,7 @@ export default function CustomerDataForm() {
               {/* Service */}
               <FormField
                 control={form.control}
-                name="subject"
+                name="service"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -119,7 +139,7 @@ export default function CustomerDataForm() {
               {/* Note */}
               <FormField
                 control={form.control}
-                name="subject"
+                name="note"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>

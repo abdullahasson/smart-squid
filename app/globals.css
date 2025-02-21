@@ -90,7 +90,12 @@ body {
 }
 
 /* Section */
-
+.changelang[data-state="open"] {
+  @apply btn-primary
+}
+.changelang[data-state="closed"] {
+  @apply btn-secondary
+}
 
 /* Buttons */
 .btn-primary {

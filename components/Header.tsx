@@ -1,6 +1,9 @@
+"use client"
+
+// Next
 import Link from "next/link"
 import Image from "next/image"
-import Logo from "@/image/logo.png"
+import { usePathname } from "next/navigation"
 // Shadcn UI
 import {
   Select,
@@ -10,8 +13,21 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+// Logo
+import Logo from "@/image/logo.png"
 
 const Header = () => {
+
+  const pathname = usePathname()
+
+  const navLinks = [
+    {name: "اتصل بنا" , href: "/contact-us"},
+    {name: "أهدافنا" , href: "/goals"} , 
+    {name: "رؤيتنا" , href: "/vision"} , 
+    {name: "خدمتنا" , href: "/services"} , 
+    {name: "الرئيسية" , href: "/"}  
+  ] 
+
   return (
     <header className="w-full bg-white py-4 shadow-sm">
       <div className="container mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-4 md:gap-0">
@@ -28,21 +44,16 @@ const Header = () => {
 
         {/* Navigation Links */}
         <div className="order-3 md:order-none flex flex-wrap justify-center gap-2 md:gap-4">
-          <Link href='/' className="btn-secondary">
-            اتصل بنا
-          </Link>
-          <Link href='/' className="btn-secondary">
-            أهدافنا
-          </Link>
-          <Link href='/' className="btn-secondary">
-            رؤيتنا
-          </Link>
-          <Link href='/services' className="btn-secondary">
-            خدمتنا
-          </Link>
-          <Link href='/' className="btn-primary">
-            الرئيسية
-          </Link>
+          {
+            navLinks.map((link , index) => {
+              const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== '/')
+              return(
+                <Link key={index} href={link.href} className={`${isActive ? "btn-primary" : "btn-secondary"}`}>
+                  {link.name}
+                </Link>
+              )
+            })
+          }
         </div>
 
         {/* Language Selector and Book Meeting Button */}
@@ -51,7 +62,8 @@ const Header = () => {
           <Select>
             <SelectTrigger
               dir="rtl"
-              className="btn-primary
+              className="
+                changelang
                 w-[100px]
                 focus:outline-none 
                 focus-visible:outline-none 

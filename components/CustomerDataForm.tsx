@@ -31,10 +31,12 @@ export default function CustomerDataForm() {
       service: "",
       note: ""
     },
+    
   })
 
   function onSubmit(values: TBookMeetingSchema) {
     console.log("Form values:", values)
+
     // Handle form submission here
   }
 
@@ -176,7 +178,7 @@ export default function CustomerDataForm() {
                         />
                       </div>
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-center" />
                   </FormItem>
                 )}
               />

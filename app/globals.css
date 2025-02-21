@@ -8,6 +8,10 @@ html {
   scroll-padding: 120px;
 }
 
+.not-found {
+  height: calc(100vh - 400px)
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

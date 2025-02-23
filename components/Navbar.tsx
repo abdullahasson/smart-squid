@@ -1,13 +1,23 @@
 const Navbar = () => {
+    
+    const navLink = [
+        {name: "المدراء" , href: "#managers"},
+        {name: "شركاء النجاح" , href: "#success_partners"},
+        {name: "أهدافنا" , href: "#our_goals"},
+        {name: "رؤيتنا" , href: "#our_vision"},
+        {name: "خدمتنا" , href: "#our_services"},
+    ]
 
     return (
-        <div className="w-full py-3 flex items-center justify-center sticky top- bg-white z-50">
+        <div className="w-full py-3 flex items-center justify-center mt-10 sticky top-0 bg-white z-50">
             <div className="flex items-center gap-6 text-black">
-                <a className="text-lg font-normal" href="#managers">المدراء</a>
-                <a className="text-lg font-normal" href="#success_partners">شركاء النجاح</a>
-                <a className="text-lg font-normal" href="#our_goals">أهدافنا</a>
-                <a className="text-lg font-normal" href="#our_vision">رؤيتنا</a>
-                <a className="text-lg font-normal" href="#our_services">خدمتنا</a>
+                {
+                    navLink.map((link, index) => {
+                        return (
+                            <a key={index} className={`text-lg font-normal`} href={link.href}>{link.name}</a>
+                        )
+                    })
+                }
             </div>
         </div>
     )

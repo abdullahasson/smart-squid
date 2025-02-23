@@ -9,7 +9,7 @@ import Social from "@/image/social.svg"
 const Services = () => {
     return (
         <div>
-            <div className="w-full flex flex-col gap-10 py-20 items-center">
+            <div className="w-full flex flex-col gap-36 py-20 items-center">
                 <div className="container flex items-center">
                     <div className="order-1 flex-1  h-96 flex items-center justify-center">
                         <Image

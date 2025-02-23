@@ -5,7 +5,7 @@ import Partner2 from "@/image/partner 2.png"
 const SuccessPartners = () => {
     return (
         <section id="success_partners" className="w-full">
-            <div className="container py-12 mx-auto flex flex-col items-end">
+            <div className="container pt-12 mx-auto flex flex-col items-end">
 
                 {/* Heading */}
                 <div className="w-full text-end">

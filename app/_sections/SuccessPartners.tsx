@@ -36,7 +36,7 @@ const SuccessPartners = () => {
                             alt="Success Partner 2"
                             className="w-full h-full object-cover"
 
-                            style={{ objectFit: 'contain' }}
+                            // style={{ objectFit: 'contain' }}
                             width={500} // Set the intrinsic width of the image
                             height={300} // Set the intrinsic height of the image
                         />

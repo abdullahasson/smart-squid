@@ -30,16 +30,13 @@ const User = () => {
 
             <Separator />
 
-            {/* Success partners */}
-            <SuccessPartners />
-
-
-
-            <Separator />
-
             {/*Managers*/}
             <Managers />
 
+            <Separator />
+
+            {/* Success partners */}
+            <SuccessPartners />
 
             <Separator />
         </div>

@@ -1,8 +1,8 @@
 const Navbar = () => {
     
     const navLink = [
-        {name: "المدراء" , href: "#managers"},
         {name: "شركاء النجاح" , href: "#success_partners"},
+        {name: "المدراء" , href: "#managers"},
         {name: "أهدافنا" , href: "#our_goals"},
         {name: "رؤيتنا" , href: "#our_vision"},
         {name: "خدمتنا" , href: "#our_services"},

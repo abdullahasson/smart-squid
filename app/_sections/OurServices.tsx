@@ -7,20 +7,20 @@ const OurServices = () => {
         <section id="our_services" className="w-full h-auto">
             <div className="container flex flex-col py-0 md:flex-row justify-start min-h-screen">
                 {/* Image Section */}
-                <div className="w-full md:w-1/2 h-[400px] md:h-auto relative flex items-center justify-start">
+                <div className="w-full md:w-1/2 h-[600px] relative flex items-center justify-start">
                     <div className="relative w-full h-full">
                         <Image
                             src={OurServicesImage}
                             alt="Our Services"
                             fill
-                            className="object-contain"
+                            // className="object-contain"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>
 
                 {/* Content Section */}
-                <div className="w-full md:w-1/2 flex flex-col items-center md:items-end justify-center p-4 md:p-8 gap-6 md:gap-12">
+                <div className="w-full md:w-1/2 h-auto flex flex-col items-center md:items-end justify-center p-4 md:p-8 gap-6 md:gap-12">
                     <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold text-center md:text-right">
                         خدمتنا
                     </h2>

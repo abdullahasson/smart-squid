@@ -16,9 +16,9 @@ const Managers = () => {
                 </div>
 
                 {/* Managers Container */}
-                <div className="mt-12 w-full flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="mt-12 w-full flex flex-col md:flex-col justify-between items-center gap-8">
                     {/* Manager 1 */}
-                    <div className="w-full md:w-1/2 flex flex-col md:flex-row-reverse items-center text-end gap-4">
+                    <div className="w-full flex-1 flex flex-col md:flex-row-reverse items-center text-end gap-4">
                         <div className="w-32 h-32 sm:w-40 sm:h-40 relative flex-shrink-0">
                             <Image
                                 src={Manager1}
@@ -38,7 +38,7 @@ const Managers = () => {
                     </div>
 
                     {/* Manager 2 */}
-                    <div className="w-full md:w-1/2 flex flex-col md:flex-row-reverse items-center text-end gap-4">
+                    <div className="w-full flex-1 flex flex-col md:flex-row-reverse items-center md:justify-end text-end gap-4">
                         <div className="w-32 h-32 sm:w-40 sm:h-40 relative flex-shrink-0">
                             <Image
                                 src={Manager2}

@@ -5,7 +5,7 @@ import LogoImage from "@/image/logo.png"
 const Footer = () => {
 
     return (
-        <div className="bg-white w-full py-12 text-black">
+        <div className="bg-white w-full py-14 text-black">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row-reverse text-end justify-between items-start gap-8 lg:gap-4">
                     {/* Logo Section */}

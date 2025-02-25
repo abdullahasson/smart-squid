@@ -1,11 +1,14 @@
 "use client"
 
 // React
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 // Zod
 import { zodResolver } from "@hookform/resolvers/zod"
 // Schema
 import { bookMeetingSchema, TBookMeetingSchema } from "@/schema/index"
+// Components
+import Confirm from "./Confirm"
 // Shadcn UI
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
@@ -21,6 +24,9 @@ import { Textarea } from "@/components/ui/textarea"
 
 
 export default function CustomerDataForm() {
+
+  const [isOpen , setIsOpen] = useState(false)
+
   const form = useForm<TBookMeetingSchema>({
     resolver: zodResolver(bookMeetingSchema),
     defaultValues: {
@@ -36,7 +42,7 @@ export default function CustomerDataForm() {
 
   function onSubmit(values: TBookMeetingSchema) {
     console.log("Form values:", values)
-
+    setIsOpen(true)
     // Handle form submission here
   }
 
@@ -157,6 +163,7 @@ export default function CustomerDataForm() {
               />
 
               <Button type="submit" className="btn-primary w-full">تأكيد</Button>
+                <Confirm isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
             <div className="flex-1" dir="ltr">
               {/* Meeting Date */}

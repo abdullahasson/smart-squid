@@ -5,7 +5,7 @@ import LogoImage from "@/image/logo.png"
 const Footer = () => {
 
     return (
-        <div className="bg-white w-full py-14 text-black">
+        <div className="bg-white w-full py-14 text-black footer-responsive">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row-reverse text-end justify-between items-start gap-8 lg:gap-4">
                     {/* Logo Section */}
@@ -20,7 +20,7 @@ const Footer = () => {
                     </div>
 
                     {/* Links Section */}
-                    <div className="flex flex-col sm:flex-row-reverse sm:justify-around items-start w-full flex-[5] gap-8 sm:gap-12">
+                    <div className="flex flex-col sm:flex-row-reverse sm:justify-around items-start w-full flex-[5] gap-8 sm:gap-12 footer-links">
                         {/* Quick Links */}
                         <div className="flex flex-col gap-2 text-lg">
                             {

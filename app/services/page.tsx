@@ -10,7 +10,7 @@ const Services = () => {
     return (
         <div>
             <div className="w-full flex flex-col gap-36 py-20 items-center">
-                <div className="container flex items-center">
+                <div className="container flex items-center service-responsive">
                     <div className="order-1 flex-1  h-96 flex items-center justify-center">
                         <Image
                             src={DesignImage}
@@ -34,7 +34,7 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className="container flex items-center">
+                <div className="container flex items-center service-responsive">
                     <div className="order-2 flex-1  h-96 flex items-center justify-center">
                         <Image
                             src={Manage}
@@ -58,7 +58,7 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className="container flex items-center">
+                <div className="container flex items-center service-responsive">
                     <div className="order-1 flex-1  h-96 flex items-center justify-center">
                         <Image
                             src={Markiting}
@@ -82,7 +82,7 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className="container flex items-center">
+                <div className="container flex items-center service-responsive">
                     <div className="order-2 flex-1  h-96 flex items-center justify-center">
                         <Image
                             src={Social}

@@ -117,3 +117,45 @@ body {
 .btn-section {
   @apply bg-[#5E4D9D] py-3 px-3 text-white rounded-md w-full sm:w-52;
 }
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+
+/* Responsive */
+/* Mobile devices */
+@media (max-width: 767px) {
+  /* Services Page */
+  .service-responsive {
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+  }
+  .service-responsive > :first-child {
+    order: 1 !important;
+    /* width: 380px; */
+  }
+  .service-responsive > :last-child {
+    order: 2 !important;
+  }
+  .service-responsive > :last-child > div {
+    width: 100%;
+    padding: 0 18px;
+    text-align: center !important;
+  }
+
+  /* Footer Component */
+  .footer-responsive .footer-links {
+    align-items: center;
+    text-align: center;
+  } 
+}

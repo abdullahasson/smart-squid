@@ -153,6 +153,18 @@ body {
     text-align: center !important;
   }
 
+  /* Book Meeting Form Component */
+  .form-responsive {
+    padding: 15px;
+    gap: 45px;
+    flex-direction: column-reverse;
+  }
+  .form-responsive > :first-child input {
+    width: 310px !important;
+  }
+
+
+
   /* Footer Component */
   .footer-responsive .footer-links {
     align-items: center;

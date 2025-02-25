@@ -13,7 +13,13 @@ import {
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 
-const Confirm = ({isOpen , setIsOpen} : {isOpen : boolean , setIsOpen : any}) => {
+type ChildComponentProps = {
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    isOpen: boolean
+  };
+
+
+const Confirm = ({isOpen , setIsOpen} : ChildComponentProps) => {
 
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>

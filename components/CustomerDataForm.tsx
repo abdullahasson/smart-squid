@@ -25,7 +25,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function CustomerDataForm() {
 
-  const [isOpen , setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const form = useForm<TBookMeetingSchema>({
     resolver: zodResolver(bookMeetingSchema),
@@ -37,7 +37,7 @@ export default function CustomerDataForm() {
       service: "",
       note: ""
     },
-    
+
   })
 
   function onSubmit(values: TBookMeetingSchema) {
@@ -50,11 +50,11 @@ export default function CustomerDataForm() {
     <div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" dir="rtl">
-          <div className="flex justify-between items-start gap-28 w-full">
+          <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold mb-3 mx-4 sm:mx-0">
+            بيانات العميل
+          </h2>
+          <div className="flex justify-between items-start gap-28 w-full form-responsive">
             <div className="flex-1 flex flex-col gap-4">
-              <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold mb-3">
-                بيانات العميل
-              </h2>
               {/* Full Name */}
               <FormField
                 control={form.control}
@@ -62,7 +62,7 @@ export default function CustomerDataForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D] " placeholder="الاسم الكامل" {...field} />
+                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D]" placeholder="الاسم الكامل" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -76,7 +76,7 @@ export default function CustomerDataForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D] " placeholder="البريد الالكتروني" {...field} />
+                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D]" placeholder="البريد الالكتروني" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -163,7 +163,7 @@ export default function CustomerDataForm() {
               />
 
               <Button type="submit" className="btn-primary w-full">تأكيد</Button>
-                <Confirm isOpen={isOpen} setIsOpen={setIsOpen} />
+              <Confirm isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
             <div className="flex-1" dir="ltr">
               {/* Meeting Date */}

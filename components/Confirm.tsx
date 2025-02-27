@@ -16,40 +16,39 @@ import { Button } from "@/components/ui/button"
 type ChildComponentProps = {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
     isOpen: boolean
-  };
+};
 
 
-const Confirm = ({isOpen , setIsOpen} : ChildComponentProps) => {
+const Confirm = ({ isOpen, setIsOpen }: ChildComponentProps) => {
 
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
                 <button className="hidden"></button>
             </DialogTrigger>
-            
-            
-            <DialogContent className="w-[900px] border-none sm:rounded-[30px] bg-blue-300">
-                 <DialogHeader className="bg-slate-400">
+
+
+            <DialogContent className="w-[900px] border-none sm:rounded-[30px]">
+                <DialogHeader>
                     <DialogTitle className="text-center text-[#5E4D9D] text-xl font-semibold">
                         تاكيد
                     </DialogTitle>
                 </DialogHeader>
 
-                <DialogDescription className="bg-purple-300">
-                    هذا الإجراء لا يمكن التراجع عنه
-                </DialogDescription>
+                <div className="my-10 text-end">
+                    <DialogDescription>
+                        هذا الإجراء لا يمكن التراجع عنه
+                    </DialogDescription>
+                </div>
 
-                <DialogFooter className="flex justify-center items-center w-full bg-red-300">
-                    
+                <DialogFooter className="flex justify-center items-center w-full">
                     <DialogClose asChild>
-                        <Button className="btn-primary mx-auto">
+                        <Button className="btn-primary mx-auto rounded-sm">
                             اغلاق
                         </Button>
                     </DialogClose>
-
-                </DialogFooter> 
+                </DialogFooter>
             </DialogContent>
-            
         </Dialog>
     )
 }

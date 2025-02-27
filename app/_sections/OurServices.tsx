@@ -5,7 +5,7 @@ const OurServices = () => {
 
     return (
         <section id="our_services" className="w-full h-auto">
-            <div className="container flex flex-col py-0 md:flex-row justify-start min-h-screen">
+            <div className="container flex flex-col py-0 md:flex-row justify-start">
                 {/* Image Section */}
                 <div className="w-full md:w-1/2 h-[600px] relative flex items-center justify-start">
                     <div className="relative w-full h-full">

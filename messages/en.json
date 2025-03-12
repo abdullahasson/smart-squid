@@ -1,0 +1,90 @@
+{
+    "Header": {
+        "nav1": "Home",
+        "nav2": "Our Services",
+        "nav3": "Our Vision",
+        "nav4": "Our Goals",
+        "nav5": "Contact Us",
+        "nav6": "Book a Meeting"
+    },
+    "Navbar": {
+        "nav1": "Services",
+        "nav2": "Vision",
+        "nav3": "Goals",
+        "nav4": "Mangagers",
+        "nav5": "Success Partners"
+    },
+    "OurServices": {
+        "title": "Our Services",
+        "description": "At Smart Octopus, we offer a comprehensive range of creative solutions designed to enhance your digital presence and achieve your business goals.",
+        "button1": "Meet with Us",
+        "button2": "Explore More"
+    },
+    "Services": {
+        "Service1": {
+            "title": "Professional Graphic Design",
+            "description": "We provide innovative and attractive designs for your brand, including logos, advertisements, and social media posts."
+        },
+        "Service2": {
+            "title": "Advertising Campaign Management",
+            "description": "Design and execute effective online advertising campaigns to increase sales and reach a wider audience using paid advertising tools like Google and Facebook."
+        },
+        "Service3": {
+            "title": "Digital Marketing",
+            "description": "We provide innovative and attractive designs for your brand, including logos, advertisements, and social media posts."
+        },
+        "Service4": {
+            "title": "Social Media Management",
+            "description": "Manage your accounts on platforms like Facebook, Instagram, Twitter, and LinkedIn with tailored content that enhances engagement and builds strong customer relationships."
+        }
+    },
+    "OurVision": {
+        "title": "Our Vision",
+        "description": "At Smart Octopus, we strive to be pioneers in delivering innovative and integrated solutions in the field of advertising and marketing, helping businesses strengthen their digital presence and achieve sustainable success. Our vision is to be the strategic partner that drives digital transformation by providing exceptional marketing services, whether through online platforms or paid advertising campaigns, with a focus on creativity and quality at every step."
+    },
+    "OurGoals": {
+        "title": "Our Goals",
+        "goal1": "Enhance Digital Presence",
+        "goal2": "Achieve Sustainable Growth",
+        "goal3": "Continuous Innovation",
+        "goal4": "Effective Customer Engagement",
+        "goal5": "Deliver Outstanding Results"
+    },
+    "Managers": {
+        "title": "Managers",
+        "manager1": "Hussein Ahmed Al-Munqadh",
+        "manager1works": "Co-Founder & Creative Director",
+        "manager2": "Emad Barak Al-Yabisi",
+        "manager2works": "Co-Founder & Digital Marketing Manager"
+    },
+    "SuccessPartners": {
+        "title": "Success Partners"
+    },
+    "BookMeeting": {
+        "title": "Client Information",
+        "fullName": "Full Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "store": "Select Store",
+        "service": "Service",
+        "note": "Additional Notes",
+        "submit": "Confirm"
+    },
+    "form": {
+        "errors": {
+          "required": "This field is required",
+          "email": "Please enter a valid email address",
+          "minLength": "Must be at least {min} characters"
+        }
+    },
+    "Footer": {
+        "footer1": "Home",
+        "footer2": "Our Services",
+        "footer3": "Our Vision",
+        "footer4": "Our Goals",
+        "footer5": "Contact Us",
+        "footer6": "Terms and condetions",
+        "footer7": "Privacy Policy",
+        "secondaryTitle": "Contact us"
+    }
+}

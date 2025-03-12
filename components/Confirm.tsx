@@ -30,20 +30,23 @@ const Confirm = ({ isOpen, setIsOpen }: ChildComponentProps) => {
 
             <DialogContent className="w-[900px] border-none sm:rounded-[30px]">
                 <DialogHeader>
-                    <DialogTitle className="text-center text-[#5E4D9D] text-xl font-semibold">
-                        تاكيد
+                    <DialogTitle className="text-center text-[#C74D0A] text-xl font-semibold">
+                        تأكيد حجز الأجتماع
                     </DialogTitle>
                 </DialogHeader>
 
-                <div className="my-10 text-end">
-                    <DialogDescription>
-                        هذا الإجراء لا يمكن التراجع عنه
+                <div className="mt-3 mb-4">
+                    <DialogDescription className="text-center text-[#434343] text-lg font-semibold mb-4">
+                        شكرا لك! لقد تم تأكيد حجز اجتماعك
+                    </DialogDescription>
+                    <DialogDescription className="text-center text-[#434343] text-lg font-semibold">
+                        تم ارسال بريد الكتروني يحتوي على تفاصيل الأجتماع
                     </DialogDescription>
                 </div>
 
                 <DialogFooter className="flex justify-center items-center w-full">
                     <DialogClose asChild>
-                        <Button className="btn-primary mx-auto rounded-sm">
+                        <Button className="btn-close mx-auto">
                             اغلاق
                         </Button>
                     </DialogClose>

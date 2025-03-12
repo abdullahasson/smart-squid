@@ -1,8 +1,20 @@
+// Next
 import Link from "next/link"
 import Image from "next/image"
+// Next Intl
+import { useTranslations } from "next-intl"
+// Logo
 import LogoImage from "@/image/logo.png"
+// Icons
+import WebSiteIcon from "@/icon/website.svg"
+import InstagramIcon from "@/icon/instagram.svg"
+import TikTokIcon from "@/icon/tiktok.svg"
+import MessagesIcons from "@/icon/message.svg"
+import xIcon from "@/icon/x.svg"
 
-const Footer = () => {
+const Footer = ({ locale }: { locale: string }) => {
+
+    const t = useTranslations("Footer")
 
     return (
         <div className="bg-white w-full py-14 text-black footer-responsive">
@@ -14,8 +26,8 @@ const Footer = () => {
                             src={LogoImage}
                             alt="Logo"
                             className="w-48 sm:w-60 my-auto"
-                            width={240} 
-                            height={120} 
+                            width={240}
+                            height={120}
                         />
                     </div>
 
@@ -23,57 +35,56 @@ const Footer = () => {
                     <div className="flex flex-col sm:flex-row-reverse sm:justify-around items-start w-full flex-[5] gap-8 sm:gap-12 footer-links">
                         {/* Quick Links */}
                         <div className="flex flex-col gap-2 text-lg">
-                            {
-                                [
-                                    { name: "الرئيسية", href: "/" },
-                                    { name: "خدمتنا", href: "/services" },
-                                    { name: "رؤيتنا", href: "/vision" },
-                                    { name: "أهدافنا", href: "/goals" },
-                                    { name: "اتصل بنا", href: "/contact-us" }
-                                ].map((link, index) => {
-                                    return (
-                                        <Link key={index} className="hover:underline transition-all" href={link.href}>
-                                            {link.name}
-                                        </Link>
-                                    )
-                                })
-                            }
+                            <Link
+                                href={`/${locale}/`}
+                                className="hover:underline transition-all"
+                            >
+                                {t("footer1")}
+                            </Link>
+                            <Link
+                                href={`/${locale}/services`}
+                                className="hover:underline transition-all"
+                            >
+                                {t("footer2")}
+                            </Link>
+                            <Link
+                                href={`/${locale}/vision`}
+                                className="hover:underline transition-all"
+                            >
+                                {t("footer3")}
+                            </Link>
+                            <Link
+                                href={`/${locale}/goals`}
+                                className="hover:underline transition-all"
+                            >
+                                {t("footer4")}
+                            </Link>
+                            <Link
+                                href={`/${locale}/contact-us`}
+                                className="hover:underline transition-all"
+                            >
+                                {t("footer5")}
+                            </Link>
                         </div>
 
                         {/* Social Links */}
                         <div className="flex flex-col gap-2 text-lg">
-                            <p className="text-[#5E4D9D] text-lg">تواصل معنا</p>
+                            <p className="text-[#5E4D9D] text-lg">{t('secondaryTitle')}</p>
                             <ul>
-                                <li>
-                                    <Link href="/" className="hover:underline transition-all flex items-center justify-end gap-1">
-                                        <span>facebool</span>
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="hover:underline transition-all flex items-center justify-end gap-1">
-                                        <span>whatsapp</span>
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="hover:underline transition-all flex items-center justify-end gap-1">
-                                        <span>telegram</span>
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="hover:underline transition-all flex items-center justify-end gap-1">
-                                        <span>xing</span>
-
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/" className="hover:underline transition-all flex items-center justify-end gap-1">
-                                        <span>twitter</span>
-
-                                    </Link>
-                                </li>
+                                {[
+                                    { name: "habbar.sa", href: "https://habbar.sa/", icon: WebSiteIcon },
+                                    { name: "info@habbar.sa", href: "ytcard12.167@gmail.com", icon: MessagesIcons },
+                                    { name: "habbar_sa", href: "https://instagram.com/habbar_sa", icon: InstagramIcon },
+                                    { name: "habbar_sa", href: "https://x.com/habbar_sa", icon: xIcon },
+                                    { name: "habbar_sa", href: "https://tiktok.com/habbar_sa", icon: TikTokIcon },
+                                ].map((itme, index) => (
+                                    <li key={index}>
+                                        <a href={itme.href} target="_blank" rel="noreferrer" className="hover:underline transition-all flex items-center justify-end gap-2">
+                                            <span>{itme.name}</span>
+                                            <Image src={itme.icon} alt="facebook" width={24} height={24} />
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
@@ -82,12 +93,12 @@ const Footer = () => {
                             <ul>
                                 <li className="mb-2">
                                     <Link className="hover:underline transition-all" href="/">
-                                        الشروط والأحكام
+                                        {t('footer6')}
                                     </Link>
                                 </li>
                                 <li className="mt-2">
                                     <Link className="hover:underline transition-all" href="/">
-                                        سياسة الخصوصية
+                                        {t('footer7')}
                                     </Link>
                                 </li>
                             </ul>

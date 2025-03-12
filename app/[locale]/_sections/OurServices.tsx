@@ -1,7 +1,13 @@
+// Next
 import Image from "next/image"
+// Next Intl
+import { useTranslations } from 'next-intl';
+// Image
 import OurServicesImage from "@/image/our_services.png"
 
 const OurServices = () => {
+
+    const t = useTranslations("OurServices")
 
     return (
         <section id="our_services" className="w-full h-auto">
@@ -22,19 +28,19 @@ const OurServices = () => {
                 {/* Content Section */}
                 <div className="w-full md:w-1/2 h-auto flex flex-col items-center md:items-end justify-center p-4 md:p-8 gap-6 md:gap-12">
                     <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold text-center md:text-right">
-                        خدمتنا
+                        {t('title')}
                     </h2>
 
-                    <p className="w-full max-w-[500px] text-[#7B7B7B] text-base md:text-xl font-semibold text-center md:text-right leading-10 md:leading-10">
-                        نحن في حبار الذكية نقدم مجموعة شاملة من الحلول الإبداعية التي تهدف إلى تعزيز وجودك الرقمي وتحقيق أهدافك التجارية.
+                    <p className="w-full max-w-[500px] text-[#7B7B7B] text-base text-end md:text-xl font-semibold leading-10 md:leading-10">
+                        {t('description')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center sm:justify-end gap-4 w-full max-w-[500px]">
                         <button className="btn-section">
-                            اجتمع معنا
+                            {t('button1')}
                         </button>
                         <button className="btn-section">
-                            استكشف المزيد
+                            {t('button2')}
                         </button>
                     </div>
                 </div>

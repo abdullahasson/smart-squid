@@ -118,6 +118,27 @@ body {
   @apply bg-[#5E4D9D] py-3 px-3 text-white rounded-md w-full sm:w-52;
 }
 
+.btn-confirm {
+  @apply border border-[#5E4D9D] font-semibold rounded-2xl py-1 px-4 md:py-2 md:px-6 text-sm md:text-base text-white bg-[#5E4D9D] w-full;
+
+  &:hover {
+    background-color: #7B6BA8 !important;
+    border-color: #7B6BA8 !important;
+    box-shadow: 0 0 10px rgba(123, 107, 168, 0.7); /* إضافة إضاءة */
+    transition: all 0.3s ease;
+  }
+}
+
+.btn-close {
+  @apply border border-[#5E4D9D] font-semibold rounded-md py-1 px-6 md:py-2 md:px-6 text-sm md:text-base text-white bg-[#5E4D9D];
+
+  &:hover {
+    background-color: #7B6BA8 !important;
+    border-color: #7B6BA8 !important;
+    box-shadow: 0 0 10px rgba(123, 107, 168, 0.7); /* إضافة إضاءة */
+    transition: all 0.3s ease;
+  }
+} 
 
 
 @layer base {

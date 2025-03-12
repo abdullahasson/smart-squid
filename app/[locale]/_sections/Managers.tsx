@@ -1,9 +1,15 @@
+// Next
 import Image from "next/image"
+// Next Intl
+import { useTranslations } from "next-intl"
+// Image
 import Manager1 from "@/image/manager 1.jpg"
 import Manager2 from "@/image/manager 2.jpg"
 
 
 const Managers = () => {
+
+    const t = useTranslations("Managers")
 
     return (
         <section id="managers" className="w-full">
@@ -11,7 +17,7 @@ const Managers = () => {
                 {/* Heading */}
                 <div className="w-full text-end">
                     <h2 className="text-[#C74D0A] text-2xl sm:text-3xl font-bold mb-4">
-                        المدراء
+                        {t('title')}
                     </h2>
                 </div>
 
@@ -29,10 +35,10 @@ const Managers = () => {
                         </div>
                         <div>
                             <h3 className="text-[#5E4D9D] text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">
-                                حسين أحمد ال منقاح
+                                {t('manager1')}
                             </h3>
                             <p className="text-[#7B7B7B] text-lg sm:text-xl font-normal">
-                                المؤسس المشارك و المدير الأبداعي
+                                {t("manager1works")}
                             </p>
                         </div>
                     </div>
@@ -49,10 +55,10 @@ const Managers = () => {
                         </div>
                         <div>
                             <h3 className="text-[#5E4D9D] text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">
-                                عماد براك اليابسي
+                                {t('manager2')}
                             </h3>
                             <p className="text-[#7B7B7B] text-lg sm:text-xl font-normal">
-                                المؤسس المشارك و مدير التسويق الرقمي
+                                {t("manager2works")}
                             </p>
                         </div>
                     </div>

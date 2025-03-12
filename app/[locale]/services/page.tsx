@@ -1,5 +1,7 @@
 // Next 
 import Image from "next/image";
+// Next Intl
+import { useTranslations } from "next-intl";
 // image
 import DesignImage from "@/image/design.svg";
 import Manage from "@/image/manage.svg"
@@ -7,6 +9,9 @@ import Markiting from "@/image/marktiting.svg"
 import Social from "@/image/social.svg"
 
 const Services = () => {
+
+    const t = useTranslations("Services")
+
     return (
         <div>
             <div className="w-full flex flex-col gap-36 py-20 items-center">
@@ -23,12 +28,10 @@ const Services = () => {
                     <div className="order-2 flex-1 flex items-center justify-center">
                         <div className="text-end w-2/3">
                             <h2 className="text-[#C74D0A] mb-5 text-xl sm:text-3xl font-bold">
-                                تصميم جرافيك احترافي
+                                {t('Service1.title')}
                             </h2>
                             <p className="text-[#7B7B7B] text-base md:text-xl font-semibold">
-                                نقدم تصاميم مبتكرة و جذابة لعلامتك التجارية , بما في ذلك
-                                الشعارات , الأعلانات و المنشورات على وسائل التواصل
-                                الاجتماعي
+                                {t('Service1.description')}
                             </p>
                         </div>
                     </div>
@@ -47,12 +50,10 @@ const Services = () => {
                     <div className="order-1 flex-1 flex items-center justify-center">
                         <div className="text-end w-2/3">
                             <h2 className="text-[#C74D0A] mb-5 text-xl sm:text-3xl font-bold">
-                                ادارة الحملات الاعلانية
+                                {t('Service2.title')}
                             </h2>
                             <p className="text-[#7B7B7B] text-base md:text-xl font-semibold">
-                                تصميم و تنفيذ حملات اعلانية فعالة على الانترنت
-                                لزيادة المبيعات و الوصول الى جمهور اوسع 
-                                باستخدام أدوات الاعلانات المدفوعة مثل جوجل و فيسبوك
+                                {t('Service2.description')}
                             </p>
                         </div>
                     </div>
@@ -71,12 +72,10 @@ const Services = () => {
                     <div className="order-2 flex-1 flex items-center justify-center">
                         <div className="text-end w-2/3">
                             <h2 className="text-[#C74D0A] mb-5 text-xl sm:text-3xl font-bold">
-                                التسويق الرقمي
+                                {t('Service3.title')}
                             </h2>
                             <p className="text-[#7B7B7B] text-base md:text-xl font-semibold">
-                                نقدم تصاميم مبتكرة و جذابة لعلامتك التجارية , بما في ذلك
-                                الشعارات , الأعلانات و المنشورات على وسائل التواصل
-                                الاجتماعي
+                                {t('Service3.description')}
                             </p>
                         </div>
                     </div>
@@ -95,12 +94,10 @@ const Services = () => {
                     <div className="order-1 flex-1 flex items-center justify-center">
                         <div className="text-end w-2/3">
                             <h2 className="text-[#C74D0A] mb-5 text-xl sm:text-3xl font-bold">
-                                تصنين جرافيك احترافي
+                                {t('Service4.title')}
                             </h2>
                             <p className="text-[#7B7B7B] text-base md:text-xl font-semibold">
-                                نقدم تصاميم مبتكرة و جذابة لعلامتك التجارية , بما في ذلك
-                                الشعارات , الأعلانات و المنشورات على وسائل التواصل
-                                الاجتماعي
+                                {t('Service4.description')}
                             </p>
                         </div>
                     </div>

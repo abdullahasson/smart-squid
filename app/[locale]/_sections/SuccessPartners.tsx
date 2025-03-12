@@ -1,8 +1,15 @@
+// Next
 import Image from "next/image"
+// Next Intl
+import { useTranslations } from "next-intl"
+// Image
 import Partner1 from "@/image/partner 1.png"
 import Partner2 from "@/image/partner 2.png"
 
 const SuccessPartners = () => {
+
+    const t = useTranslations("SuccessPartners")
+
     return (
         <section id="success_partners" className="w-full">
             <div className="container pt-12 mx-auto flex flex-col items-end">
@@ -10,7 +17,7 @@ const SuccessPartners = () => {
                 {/* Heading */}
                 <div className="w-full text-end">
                     <h2 className="text-[#C74D0A] text-2xl sm:text-3xl font-bold">
-                        شركاء النجاح
+                        {t('title')}
                     </h2>
                 </div>
 

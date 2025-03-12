@@ -1,11 +1,16 @@
+// Next Intl
+import { useTranslations } from "next-intl"
+
 const Navbar = () => {
     
+    const t = useTranslations('Navbar')
+
     const navLink = [
-        {name: "شركاء النجاح" , href: "#success_partners"},
-        {name: "المدراء" , href: "#managers"},
-        {name: "أهدافنا" , href: "#our_goals"},
-        {name: "رؤيتنا" , href: "#our_vision"},
-        {name: "خدمتنا" , href: "#our_services"},
+        {name: t('nav5') , href: "#success_partners"},
+        {name: t('nav4') , href: "#managers"},
+        {name: t('nav3') , href: "#our_goals"},
+        {name: t('nav2') , href: "#our_vision"},
+        {name: t('nav1') , href: "#our_services"},
     ]
 
     return (

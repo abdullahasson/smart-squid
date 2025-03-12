@@ -3,6 +3,8 @@
 // React
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+// Next Intl
+import { useTranslations } from "next-intl"
 // Zod
 import { zodResolver } from "@hookform/resolvers/zod"
 // Schema
@@ -24,6 +26,8 @@ import { Textarea } from "@/components/ui/textarea"
 
 
 export default function CustomerDataForm() {
+
+  const t = useTranslations("BookMeeting")
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
@@ -49,11 +53,37 @@ export default function CustomerDataForm() {
   return (
     <div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" dir="rtl">
-          <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold mb-3 mx-4 sm:mx-0">
-            بيانات العميل
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <h2 className="text-[#C74D0A] text-xl md:text-2xl font-bold mb-3 text-end">
+            {t('title')}
           </h2>
           <div className="flex justify-between items-start gap-28 w-full form-responsive">
+
+            <div className="flex-1">
+              {/* Meeting Date */}
+              {/* Direct Calendar Selection */}
+              <FormField
+                control={form.control}
+                name="date"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col">
+                    <FormControl>
+                      <div>
+                        <Calendar
+                          mode="single"
+                          selected={field.value}
+                          onSelect={field.onChange}
+                          className="border-none p-0"
+                          disabled={(date) => date < new Date()}
+                        />
+                      </div>
+                    </FormControl>
+                    <FormMessage className="text-center" />
+                  </FormItem>
+                )}
+              />
+            </div>
+
             <div className="flex-1 flex flex-col gap-4">
               {/* Full Name */}
               <FormField
@@ -62,9 +92,9 @@ export default function CustomerDataForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D]" placeholder="الاسم الكامل" {...field} />
+                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D]  placeholder:text-end" placeholder={t("fullName")} {...field} />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-end" />
                   </FormItem>
                 )}
               />
@@ -76,9 +106,9 @@ export default function CustomerDataForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D]" placeholder="البريد الالكتروني" {...field} />
+                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D]  placeholder:text-end" placeholder={t("email")} {...field} />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-end" />
                   </FormItem>
                 )}
               />
@@ -102,12 +132,12 @@ export default function CustomerDataForm() {
                         </SelectContent>
                       </Select> */}
                       <Input
-                        className="rounded-full px-4 py-3 border border-[#5E4D9D]"
-                        placeholder="955 123 456"
+                        className="rounded-full px-4 py-3 border border-[#5E4D9D]  placeholder:text-end"
+                        placeholder={t("phone")}
                         {...field}
                       />
                     </div>
-                    <FormMessage />
+                    <FormMessage className="text-end" />
                   </FormItem>
                 )}
               />
@@ -119,9 +149,9 @@ export default function CustomerDataForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D] " placeholder="اختيار المتجر" {...field} />
+                      <Input className="rounded-full px-4 py-3 border border-[#5E4D9D]  placeholder:text-end " placeholder={t("store")} {...field} />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-end" />
                   </FormItem>
                 )}
               />
@@ -134,12 +164,12 @@ export default function CustomerDataForm() {
                   <FormItem>
                     <FormControl>
                       <Textarea
-                        placeholder="وصف مختصر للخدمة"
-                        className="resize-none h-40 px-4 py-3 rounded-2xl border border-[#5E4D9D]"
+                        placeholder={t('service')}
+                        className="resize-none h-40 px-4 py-3 rounded-2xl border border-[#5E4D9D]  placeholder:text-end"
                         {...field}
                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-end" />
                   </FormItem>
                 )}
               />
@@ -152,44 +182,21 @@ export default function CustomerDataForm() {
                   <FormItem>
                     <FormControl>
                       <Textarea
-                        placeholder="ملاحظة اضافية"
-                        className="resize-none px-4 py-3 rounded-2xl border border-[#5E4D9D]"
+                        placeholder={t('note')}
+                        className="resize-none px-4 py-3 rounded-2xl border border-[#5E4D9D]  placeholder:text-end"
                         {...field}
                       />
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage className="text-end" />
                   </FormItem>
                 )}
               />
 
-              <Button type="submit" className="btn-primary w-full">تأكيد</Button>
+              <Button type="submit" className="btn-confirm">{t('submit')}</Button>
               <Confirm isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
-            <div className="flex-1" dir="ltr">
-              {/* Meeting Date */}
-              {/* Direct Calendar Selection */}
-              <FormField
-                control={form.control}
-                name="date"
-                render={({ field }) => (
-                  <FormItem className="flex flex-col">
-                    {/* <FormLabel>Meeting Date</FormLabel> */}
-                    <FormControl>
-                      <div>
-                        <Calendar
-                          mode="single"
-                          selected={field.value}
-                          onSelect={field.onChange}
-                          className="border-none p-0"
-                          disabled={(date) => date < new Date()}
-                        />
-                      </div>
-                    </FormControl>
-                    <FormMessage className="text-center" />
-                  </FormItem>
-                )}
-              />
-            </div>
+
+
           </div>
         </form>
       </Form>

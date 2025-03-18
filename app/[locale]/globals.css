@@ -26,6 +26,7 @@ html {
 body {
   background-color: #F8F7FD;
   font-family: "Almarai", sans-serif;
+  overflow-x: hidden;
 }
 
 @layer base {

@@ -2,7 +2,8 @@
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
-import { useTranslations } from 'next-intl';
+import Link from "next/link"
+import { useTranslations, useLocale } from 'next-intl';
 import OurServicesImage from "@/image/our_services.png";
 
 // Animation variants
@@ -19,8 +20,8 @@ const containerVariants = {
 
 const itemVariants = (isRTL: boolean) => ({
   hidden: { opacity: 0, x: isRTL ? 100 : -100 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
     transition: { type: 'spring', stiffness: 120 }
   }
@@ -38,6 +39,7 @@ const imageVariants = {
 const OurServices = () => {
   const t = useTranslations("OurServices");
   const pathname = usePathname();
+  const locale = useLocale();
   const isRTL = pathname?.startsWith('/ar') || false;
 
   return (
@@ -50,7 +52,7 @@ const OurServices = () => {
         className="container flex flex-col py-0 md:flex-row justify-start"
       >
         {/* Image Section */}
-        <motion.div 
+        <motion.div
           variants={imageVariants}
           className="w-full md:w-1/2 h-[600px] relative flex items-center justify-start"
         >
@@ -66,45 +68,50 @@ const OurServices = () => {
         </motion.div>
 
         {/* Content Section */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           className="w-full md:w-1/2 h-auto flex flex-col items-center md:items-end justify-center p-4 md:p-8 gap-6 md:gap-12"
           style={{ direction: isRTL ? 'ltr' : 'rtl' }}
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants(isRTL)}
             className="text-[#C74D0A] text-xl md:text-2xl font-bold text-center md:text-right"
           >
             {t('title')}
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             variants={itemVariants(isRTL)}
             className="w-full max-w-[500px] text-[#7B7B7B] text-base text-end md:text-xl font-semibold leading-10 md:leading-10"
           >
             {t('description')}
           </motion.p>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             className="flex flex-col sm:flex-row items-center sm:justify-end gap-4 w-full max-w-[500px]"
           >
-            <motion.button 
-              variants={itemVariants(isRTL)}
-              className="btn-section"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {t('button1')}
-            </motion.button>
-            <motion.button
-              variants={itemVariants(isRTL)}
-              className="btn-section"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {t('button2')}
-            </motion.button>
+            <Link href={`${locale}/book-meeting`}>
+              <motion.button
+                variants={itemVariants(isRTL)}
+                className="btn-section text-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t('button1')}
+              </motion.button>
+            </Link>
+
+            <Link href="">
+              <motion.button
+                variants={itemVariants(isRTL)}
+                className="btn-section text-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t('button2')}
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>
